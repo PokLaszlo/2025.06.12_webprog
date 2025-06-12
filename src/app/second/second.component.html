@@ -1,0 +1,29 @@
+<p>second works!</p>
+<style>
+    p{
+        background-color: blue;
+        color: yellow;
+    }
+</style>
+<h2>Dolgozók</h2>
+<table class="table table-secondary">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Név</th>
+            <th>Település</th>
+            <th>Fizetés</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(emp of employeeList;track emp.id){
+            <tr>
+                <td>{{emp.id}}</td>
+                <td>{{emp.name}}</td>
+                <td>{{emp.city}}</td>
+                <td>{{emp.salary}}</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
